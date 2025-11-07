@@ -2,7 +2,9 @@ FROM node:22-alpine AS build
 
 WORKDIR /app
 COPY package* .
-RUN npm install
+COPY pnpm-lock.yaml .
+RUN npm install -g pnpm
+RUN pnpm install
 COPY . .
 RUN npm run build
 
