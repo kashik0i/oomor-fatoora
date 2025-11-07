@@ -245,18 +245,31 @@ const InvoiceTemplate2 = (data: InvoiceType) => {
                     </div>
                     <div className="my-2">
                         <span className="font-semibold text-md text-gray-800">
-                            Please send the payment to this address
-                            <p className="text-sm">
-                                Bank: {details.paymentInformation?.bankName}
-                            </p>
-                            <p className="text-sm">
-                                Account name:{" "}
-                                {details.paymentInformation?.accountName}
-                            </p>
-                            <p className="text-sm">
-                                Account no:{" "}
-                                {details.paymentInformation?.accountNumber}
-                            </p>
+                            {details.paymentInformation && (details.paymentInformation.bank?.enabled || details.paymentInformation.stripe?.enabled || details.paymentInformation.wallet?.enabled || details.paymentInformation.instapay?.enabled) && (
+                                <div className='my-2'>
+                                    <p className='font-semibold text-blue-600'>Payment Information:</p>
+                                    {details.paymentInformation.bank?.enabled && (
+                                        <div className="text-sm text-gray-800">
+                                            <p>Bank: {details.paymentInformation.bank.bankName}</p>
+                                            <p>Account Name: {details.paymentInformation.bank.accountName}</p>
+                                            <p>Account No: {details.paymentInformation.bank.accountNumber}</p>
+                                        </div>
+                                    )}
+                                    {details.paymentInformation.stripe?.enabled && (
+                                        <p className="text-sm text-gray-800">Stripe: {details.paymentInformation.stripe.url}</p>
+                                    )}
+                                    {details.paymentInformation.wallet?.enabled && (
+                                        <p className="text-sm text-gray-800">
+                                            {details.paymentInformation.wallet.type} Wallet: {details.paymentInformation.wallet.phoneNumber}
+                                        </p>
+                                    )}
+                                    {details.paymentInformation.instapay?.enabled && (
+                                        <p className="text-sm text-gray-800">
+                                            Instapay: {details.paymentInformation.instapay.walletUrl || details.paymentInformation.instapay.bankUrl || details.paymentInformation.instapay.accountUrl || details.paymentInformation.instapay.phoneUrl}
+                                        </p>
+                                    )}
+                                </div>
+                            )}
                         </span>
                     </div>
                 </div>
