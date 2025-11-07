@@ -31,6 +31,7 @@ const ViewTemplate = (props: ViewTemplatePageProps) => {
                 sender={formValues.sender}
                 receiver={formValues.receiver}
                 details={formValues.details}
+                exportType={formValues.exportType}
             />
         </div>
     );
