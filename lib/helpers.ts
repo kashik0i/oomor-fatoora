@@ -156,6 +156,17 @@ const isValidEmail = (email: string) => {
 };
 
 /**
+ * A method to check if a string is a phone number
+ *
+ * @param {string} str - String to check
+ * @returns {boolean} Boolean indicating if the string is a phone number
+ */
+export const isPhoneNumber = (str: string) => {
+    const phoneRegex = /^\+?[1-9]\d{1,14}$/; // E.164 format
+    return phoneRegex.test(str);
+};
+
+/**
  * A method to check if a string is a data URL
  *
  * @param {string} str - String to check

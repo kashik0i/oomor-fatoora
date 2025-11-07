@@ -12,18 +12,18 @@ export const ROOTKEYWORDS = [
 export const JSONLD = {
     "@context": "https://schema.org",
     "@type": "Website",
-    name: "Invoify",
+    name: "fatoora",
     description: "An Invoice Generator Web App",
     keywords: ROOTKEYWORDS,
     url: BASE_URL,
-    image: "https://invoify.vercel.app/_next/static/media/invoify-logo.7ef8fa33.svg",
+    image: "https://fatoora.oomor.com/_next/static/media/fatoora-logo.7ef8fa33.svg",
     mainEntityOfPage: {
         "@type": "WebPage",
         "@id": `${BASE_URL}/#website`,
     },
     author: {
         "@type": "Person",
-        name: "Ali Abbasov",
+        name: "Amr Badawy",
         url: AUTHOR_WEBSITE,
     },
     "@graph": [

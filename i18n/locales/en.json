@@ -4,6 +4,7 @@
         "description": "Generate Invoice",
         "newInvBadge": "New Invoice",
         "wizard": {
+            "exportType": "Export Type",
             "fromAndTo": "From & To",
             "invoiceDetails": "Invoice Details",
             "lineItems": "Line Items",
@@ -13,6 +14,14 @@
             "back": "Back"
         },
         "steps": {
+            "exportType": {
+                "heading": "Select Invoice Type",
+                "description": "Choose the format in which you want to export the invoice.",
+                "pdf": "PDF",
+                "json": "JSON",
+                "csv": "CSV",
+                "whatsapp": "WhatsApp"
+            },
             "fromAndTo": {
                 "billFrom": "Bill From",
                 "billTo": "Bill To",
@@ -53,7 +62,26 @@
                 "heading": "Payment Information",
                 "bankName": "Bank Name",
                 "accountName": "Account Name",
-                "accountNumber": "Account Number"
+                "accountNumber": "Account Number",
+                "bank": {
+                    "heading": "Bank"
+                },
+                "stripe": {
+                    "heading": "Stripe",
+                    "url": "Stripe URL"
+                },
+                "wallet": {
+                    "heading": "Wallet",
+                    "type": "Wallet Type",
+                    "phoneNumber": "Phone Number"
+                },
+                "instapay": {
+                    "heading": "Instapay",
+                    "walletUrl": "Wallet URL",
+                    "bankUrl": "Bank URL",
+                    "accountUrl": "Account URL",
+                    "phoneUrl": "Phone URL"
+                }
             },
             "summary": {
                 "heading": "Summary",

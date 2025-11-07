@@ -3,9 +3,14 @@ import { ToastAction } from "@/components/ui/toast";
 import { toast } from "@/components/ui/use-toast";
 
 const useToasts = () => {
-    type SendErrorType = {
+    type SendMailErrorType = {
         email: string;
         sendPdfToMail: (email: string) => void;
+    };
+
+    type SendWhatsAppErrorType = {
+        phoneNumber: string;
+        sendInvoiceToWhatsApp: (phoneNumber: string) => void;
     };
 
     const newInvoiceSuccess = () => {
@@ -49,7 +54,7 @@ const useToasts = () => {
         });
     };
 
-    const sendPdfError = ({ email, sendPdfToMail }: SendErrorType) => {
+    const sendPdfError = ({ email, sendPdfToMail }: SendMailErrorType) => {
         toast({
             variant: "destructive",
             title: "Error",
@@ -69,7 +74,31 @@ const useToasts = () => {
         toast({
             variant: "destructive",
             title: "Error",
-            description: "Something went importing the invoice. Make sure the file is a valid Invoify JSON export",
+            description: "Something went importing the invoice. Make sure the file is a valid fatoora JSON export",
+        });
+    };
+
+    const sendWhatsAppSuccess = () => {
+        toast({
+            variant: "default",
+            title: "WhatsApp message sent",
+            description: "Your invoice has been sent via WhatsApp",
+        });
+    };
+
+    const sendWhatsAppError = ({ phoneNumber, sendInvoiceToWhatsApp }: SendWhatsAppErrorType) => {
+        toast({
+            variant: "destructive",
+            title: "Error",
+            description: "Something went wrong. Try again in a moment",
+            action: (
+                <ToastAction
+                    onClick={() => sendInvoiceToWhatsApp(phoneNumber)}
+                    altText="Try again"
+                >
+                    Try again
+                </ToastAction>
+            ),
         });
     };
 
@@ -81,6 +110,8 @@ const useToasts = () => {
         sendPdfSuccess,
         sendPdfError,
         importInvoiceError,
+        sendWhatsAppSuccess,
+        sendWhatsAppError,
     };
 };
 

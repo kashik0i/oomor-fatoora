@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 
 // Assets
-import Logo from "@/public/assets/img/invoify-logo.svg";
+import Logo from "@/public/assets/img/invoify-logo.png";
 
 // ShadCn
 import { Card } from "@/components/ui/card";
@@ -23,14 +23,14 @@ const BaseNavbar = () => {
             <nav>
                 <Card className="flex flex-wrap justify-between items-center px-5 gap-5">
                     <Link href={"/"}>
-                        <Image
-                            src={Logo}
-                            alt="Invoify Logo"
-                            width={190}
-                            height={100}
-                            loading="eager"
-                            style={{ height: "auto" }}
-                        />
+                        {/*<Image*/}
+                        {/*    src={Logo}*/}
+                        {/*    alt="fatoora Logo"*/}
+                        {/*    width={190}*/}
+                        {/*    height={100}*/}
+                        {/*    loading="eager"*/}
+                        {/*    style={{ height: "auto" }}*/}
+                        {/*/>*/}
                     </Link>
                     {/* ? DEV Only */}
                     {devEnv && <DevDebug />}

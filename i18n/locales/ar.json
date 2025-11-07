@@ -4,6 +4,7 @@
     "description": "إنشاء الفاتورة",
     "newInvBadge": "فاتورة جديدة",
     "wizard": {
+      "exportType": "نوع التصدير",
       "fromAndTo": "من & إلى",
       "invoiceDetails": "تفاصيل الفاتورة",
       "lineItems": "عناصر الفاتورة",
@@ -13,6 +14,14 @@
       "back": "السابق"
     },
     "steps": {
+      "exportType": {
+        "heading": "اختر نوع الفاتورة",
+        "description": "اختر الصيغة التي تريد تصدير الفاتورة بها.",
+        "pdf": "PDF",
+        "json": "JSON",
+        "csv": "CSV",
+        "whatsapp": "واتساب"
+      },
       "fromAndTo": {
         "billFrom": "الفاتورة من",
         "billTo": "الفاتورة إلى",
@@ -53,7 +62,26 @@
         "heading": "معلومات الدفع",
         "bankName": "اسم البنك",
         "accountName": "اسم الحساب",
-        "accountNumber": "رقم الحساب"
+        "accountNumber": "رقم الحساب",
+        "bank": {
+          "heading": "البنك"
+        },
+        "stripe": {
+          "heading": "Stripe",
+          "url": "رابط Stripe"
+        },
+        "wallet": {
+          "heading": "المحفظة",
+          "type": "نوع المحفظة",
+          "phoneNumber": "رقم الهاتف"
+        },
+        "instapay": {
+          "heading": "Instapay",
+          "walletUrl": "رابط المحفظة",
+          "bankUrl": "رابط البنك",
+          "accountUrl": "رابط الحساب",
+          "phoneUrl": "رابط الهاتف"
+        }
       },
       "summary": {
         "heading": "الملخص",

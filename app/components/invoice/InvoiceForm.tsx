@@ -31,6 +31,7 @@ import {
 
 // Contexts
 import { useTranslationContext } from "@/contexts/TranslationContext";
+import InvoiceExportTypeSection from "@/app/components/invoice/form/sections/InvoiceExportTypeSection";
 
 const InvoiceForm = () => {
     const { _t } = useTranslationContext();
@@ -72,6 +73,10 @@ const InvoiceForm = () => {
                 <CardContent>
                     <div className="space-y-8">
                         <Wizard>
+                            <WizardStep>
+                               <InvoiceExportTypeSection />
+                            </WizardStep>
+
                             <WizardStep>
                                 <div className="flex gap-x-20 gap-y-10">
                                     <BillFromSection />

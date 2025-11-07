@@ -14,10 +14,11 @@ import {
     BookmarkIcon,
     DownloadCloudIcon,
     Eye,
-    Mail,
+    Mail, MessageCircle,
     MoveLeft,
     Printer,
 } from "lucide-react";
+import SendWhatsappInvoiceModal from "@/app/components/modals/whatsapp/SendWhatsappInvoiceModal";
 
 export default function FinalPdf() {
     const {
@@ -95,6 +96,17 @@ export default function FinalPdf() {
                         Send to mail
                     </BaseButton>
                 </SendPdfToEmailModal>
+
+                <SendWhatsappInvoiceModal sendWhatsappInvoice={() => Promise.resolve()}>
+                    <BaseButton
+                        tooltipLabel="Send invoice via WhatsApp"
+                        size="sm"
+                        variant={"outline"}
+                    >
+                        <MessageCircle className="w-5 h-5" />
+                        Send to WhatsApp
+                    </BaseButton>
+                </SendWhatsappInvoiceModal>
             </div>
             <AspectRatio ratio={1 / 1.4}>
                 <iframe

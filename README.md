@@ -1,13 +1,13 @@
-[![Discord](https://img.shields.io/badge/Discord-%40Invoify-000000?style=flat&logo=Discord&logoColor=#5865F2)](https://discord.gg/uhXKHbVKHZ)
-# Invoify
+[![Discord](https://img.shields.io/badge/Discord-%40fatoora-000000?style=flat&logo=Discord&logoColor=#5865F2)](https://discord.gg/uhXKHbVKHZ)
+# fatoora
 
-Invoify is a web-based invoice generator application built with Next.js 13, TypeScript, React, and the Shadcn UI library. It provides an easy way to create and manage professional invoices.
+fatoora is a web-based invoice generator application built with Next.js 13, TypeScript, React, and the Shadcn UI library. It provides an easy way to create and manage professional invoices.
 
-![Invoify Website image](/public/assets/img/invoify-web-app.png)
+![fatoora Website image](/public/assets/img/fatoora-web-app.png)
 
 ## Table of Contents
 
-- [Invoify](#invoify)
+- [fatoora](#fatoora)
   - [Table of Contents](#table-of-contents)
   - [Technologies](#technologies)
     - [Core Technologies](#core-technologies)
@@ -54,13 +54,13 @@ Invoify is a web-based invoice generator application built with Next.js 13, Type
 ## Demo
 
 > [!NOTE]
-> Please be advised that there are currently issues when using this application in the Mozilla Firefox browser. For more information, refer to [Issue #11](https://github.com/aliabb01/invoify/issues/11).
+> Please be advised that there are currently issues when using this application in the Mozilla Firefox browser. For more information, refer to [Issue #11](https://github.com/aliabb01/fatoora/issues/11).
 
-Visit the [live demo](https://invoify.vercel.app) to see Invoify in action.
+Visit the [live demo](https://fatoora.vercel.app) to see fatoora in action.
 
 ## Getting Started
 
-Follow these instructions to get Invoify up and running on your local machine.
+Follow these instructions to get fatoora up and running on your local machine.
 
 ### Prerequisites
 
@@ -71,8 +71,8 @@ Follow these instructions to get Invoify up and running on your local machine.
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/al1abb/invoify.git
-   cd invoify
+   git clone https://github.com/al1abb/fatoora.git
+   cd fatoora
    ```
 2. Install dependencies
    

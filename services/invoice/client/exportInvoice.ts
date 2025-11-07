@@ -15,7 +15,7 @@ import { ExportTypes, InvoiceType } from "@/types";
 export const exportInvoice = async (
     exportAs: ExportTypes,
     formValues: InvoiceType
-) => {
+): Promise<void> => {
     return fetch(`${EXPORT_INVOICE_API}?format=${exportAs}`, {
         method: "POST",
         body: JSON.stringify(formValues),

@@ -47,6 +47,7 @@ const defaultInvoiceContext = {
   saveInvoice: () => {},
   deleteInvoice: (index: number) => {},
   sendPdfToMail: (email: string): Promise<void> => Promise.resolve(),
+  sendInvoiceToWhatsApp: async (phone: string): Promise<void> => Promise.resolve(),
   exportInvoiceAs: (exportAs: ExportTypes) => {},
   importInvoice: (file: File) => {},
 };
@@ -74,6 +75,10 @@ export const InvoiceContextProvider = ({
     modifiedInvoiceSuccess,
     sendPdfSuccess,
     sendPdfError,
+    sendWhatsAppSuccess,
+    sendWhatsAppError,
+    // exportInvoiceSuccess,
+    // exportInvoiceError,
     importInvoiceError,
   } = useToasts();
 
@@ -314,32 +319,61 @@ export const InvoiceContextProvider = ({
    * @param {string} email - The email address to which the Invoice PDF will be sent.
    * @returns {Promise<void>} A promise that resolves once the email is successfully sent.
    */
-  const sendPdfToMail = (email: string) => {
+  const sendPdfToMail = async (email: string): Promise<void> => {
     const fd = new FormData();
     fd.append("email", email);
     fd.append("invoicePdf", invoicePdf, "invoice.pdf");
     fd.append("invoiceNumber", getValues().details.invoiceNumber);
 
-    return fetch(SEND_PDF_API, {
-      method: "POST",
-      body: fd,
-    })
-      .then((res) => {
-        if (res.ok) {
-          // Successful toast msg
-          sendPdfSuccess();
-        } else {
-          // Error toast msg
-          sendPdfError({ email, sendPdfToMail });
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-
-        // Error toast msg
-        sendPdfError({ email, sendPdfToMail });
+    try {
+      const res = await fetch(SEND_PDF_API, {
+        method: "POST",
+        body: fd,
       });
+      if (res.ok) {
+        // Successful toast msg
+        sendPdfSuccess();
+      } else {
+        // Error toast msg
+        sendPdfError({email, sendPdfToMail});
+      }
+    } catch (error) {
+      console.log(error);
+
+      // Error toast msg
+      sendPdfError({email, sendPdfToMail});
+    }
   };
+
+  /**
+   * Send the invoice PDF to the specified WhatsApp number.
+   *
+   * @param {string} phone - The WhatsApp number to which the Invoice PDF will be sent.
+   * @returns {Promise<void>} A promise that resolves once the WhatsApp message is successfully sent.
+   */
+  const sendInvoiceToWhatsApp = async (phone: string): Promise<void> => {
+    const fd = new FormData();
+    fd.append("phone", phone);
+
+    try {
+      const res = await fetch(SEND_PDF_API + "/whatsapp", {
+        method: "POST",
+        body: fd,
+      });
+      if (res.ok) {
+        // Successful toast msg
+        sendWhatsAppSuccess();
+      } else {
+        // Error toast msg
+        sendWhatsAppError({phoneNumber: phone, sendInvoiceToWhatsApp});
+      }
+    } catch (error) {
+      console.log(error);
+
+      // Error toast msg
+      sendWhatsAppError({phoneNumber: phone, sendInvoiceToWhatsApp});
+    }
+  }
 
   /**
    * Export an invoice in the specified format using the provided form values.
@@ -409,6 +443,7 @@ export const InvoiceContextProvider = ({
         sendPdfToMail,
         exportInvoiceAs,
         importInvoice,
+        sendInvoiceToWhatsApp,
       }}
     >
       {children}

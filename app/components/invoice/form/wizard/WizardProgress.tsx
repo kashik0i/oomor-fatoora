@@ -77,26 +77,31 @@ const WizardProgress = ({ wizard }: WizardProgressProps) => {
     const steps: WizardStepType[] = [
         {
             id: 0,
+            label: _t("form.wizard.exportType"),
+            isValid: true,
+        },
+        {
+            id: 1,
             label: _t("form.wizard.fromAndTo"),
             isValid: step1Valid,
         },
         {
-            id: 1,
+            id: 2,
             label: _t("form.wizard.invoiceDetails"),
             isValid: step2Valid,
         },
         {
-            id: 2,
+            id: 3,
             label: _t("form.wizard.lineItems"),
             isValid: step3Valid,
         },
         {
-            id: 3,
+            id: 4,
             label: _t("form.wizard.paymentInfo"),
             isValid: step4Valid,
         },
         {
-            id: 4,
+            id: 5,
             label: _t("form.wizard.summary"),
             isValid: step5Valid,
         },

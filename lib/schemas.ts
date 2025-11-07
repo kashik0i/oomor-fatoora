@@ -116,10 +116,37 @@ const ItemSchema = z.object({
     total: fieldValidators.stringToNumber,
 });
 
+const BankPaymentSchema = z.object({
+    enabled: z.boolean(),
+    bankName: fieldValidators.stringOptional,
+    accountName: fieldValidators.stringOptional,
+    accountNumber: fieldValidators.stringOptional,
+});
+
+const StripePaymentSchema = z.object({
+    enabled: z.boolean(),
+    url: fieldValidators.stringOptional,
+});
+
+const WalletPaymentSchema = z.object({
+    enabled: z.boolean(),
+    type: z.enum(["vodafone", "etisalat"]).optional(),
+    phoneNumber: fieldValidators.stringOptional,
+});
+
+const InstapayPaymentSchema = z.object({
+    enabled: z.boolean(),
+    walletUrl: fieldValidators.stringOptional,
+    bankUrl: fieldValidators.stringOptional,
+    accountUrl: fieldValidators.stringOptional,
+    phoneUrl: fieldValidators.stringOptional,
+});
+
 const PaymentInformationSchema = z.object({
-    bankName: fieldValidators.stringMin1,
-    accountName: fieldValidators.stringMin1,
-    accountNumber: fieldValidators.stringMin1,
+    bank: BankPaymentSchema,
+    stripe: StripePaymentSchema,
+    wallet: WalletPaymentSchema,
+    instapay: InstapayPaymentSchema,
 });
 
 const DiscountDetailsSchema = z.object({
@@ -166,7 +193,10 @@ const InvoiceDetailsSchema = z.object({
     pdfTemplate: z.number(),
 });
 
+const ExportTypesSchema = z.enum(["json", "csv", "pdf", "whatsapp"]);
+
 const InvoiceSchema = z.object({
+    exportType: ExportTypesSchema,
     sender: InvoiceSenderSchema,
     receiver: InvoiceReceiverSchema,
     details: InvoiceDetailsSchema,
