@@ -14,7 +14,7 @@ export const BASE_URL = "https://fatoora.oomor.com";
 export const OG_AUTHOR_WEBSITE = "https://aliabb.vercel.app";
 export const OG_AUTHOR_GITHUB = "https://github.com/al1abb";
 export const AUTHOR_WEBSITE = "https://www.badawy.dev";
-export const AUTHOR_GITHUB = "https://github.com/kashk0i";
+export const AUTHOR_GITHUB = "https://github.com/kashik0i";
 
 /**
  * API endpoints

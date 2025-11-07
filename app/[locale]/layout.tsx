@@ -101,7 +101,7 @@ export default async function LocaleLayout(props: {
                         <Toaster />
 
                         {/* Vercel analytics */}
-                        <Analytics />
+                        {/*<Analytics />*/}
                     </Providers>
                 </NextIntlClientProvider>
             </body>

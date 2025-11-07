@@ -56,7 +56,7 @@ fatoora is a web-based invoice generator application built with Next.js 13, Type
 > [!NOTE]
 > Please be advised that there are currently issues when using this application in the Mozilla Firefox browser. For more information, refer to [Issue #11](https://github.com/aliabb01/fatoora/issues/11).
 
-Visit the [live demo](https://fatoora.vercel.app) to see fatoora in action.
+Visit the [live demo](https://fatoora.oomor.com) to see fatoora in action.
 
 ## Getting Started
 
