@@ -1,5 +1,5 @@
 // Types
-import {SignatureColor, SignatureFont} from "@/types";
+import {InvoiceType, SignatureColor, SignatureFont} from "@/types";
 import {InvoiceSchema} from "@/lib/schemas";
 
 /**
@@ -119,7 +119,8 @@ export const SHORT_DATE_OPTIONS: Intl.DateTimeFormatOptions = {
 /**
  * Form defaults
  */
-export const FORM_DEFAULT_VALUES = {
+export const FORM_DEFAULT_VALUES: InvoiceType = {
+    exportType: "pdf",
     sender: {
         name: "",
         address: "",
@@ -170,10 +171,36 @@ export const FORM_DEFAULT_VALUES = {
             costType: "amount",
         },
         paymentInformation: {
-            bankName: "",
-            accountName: "",
-            accountNumber: "",
+            bank: {
+                enabled: false,
+                bankName: "",
+                accountName: "",
+                accountNumber: "",
+            },
+            stripe: {
+                enabled: false,
+                url: "",
+            },
+            wallet: {
+                enabled: false,
+                type: "vodafone",
+                phoneNumber: "",
+            },
+            instapay: {
+                enabled: false,
+                walletUrl: "",
+                bankUrl: "",
+                accountUrl: "",
+                phoneUrl: "",
+            }
         },
+        totalAmount: 0,
+        purchaseOrderNumber: "",
+        subTotal: 0,
+        signature: {
+            data: "",
+        },
+        updatedAt: "",
         additionalNotes: "",
         paymentTerms: "",
         totalAmountInWords: "",
@@ -207,8 +234,8 @@ export const FORM_FILL_VALUES: typeof InvoiceSchema._type = {
     details: {
         invoiceLogo: "",
         invoiceNumber: "INV0001",
-        invoiceDate: new Date(),
-        dueDate: new Date(),
+        invoiceDate: new Date().toLocaleDateString("en-US", DATE_OPTIONS),
+        dueDate: new Date().toLocaleDateString("en-US", DATE_OPTIONS),
         items: [
             {
                 name: "Product 1",

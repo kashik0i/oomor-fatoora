@@ -63,8 +63,8 @@ type InvoiceContextProviderProps = {
 };
 
 export const InvoiceContextProvider = ({
-  children,
-}: InvoiceContextProviderProps) => {
+                                         children,
+                                       }: InvoiceContextProviderProps) => {
   const router = useRouter();
 
   // Toasts
@@ -98,8 +98,8 @@ export const InvoiceContextProvider = ({
       // Saved invoices variables
       const savedInvoicesJSON = window.localStorage.getItem("savedInvoices");
       savedInvoicesDefault = savedInvoicesJSON
-        ? JSON.parse(savedInvoicesJSON)
-        : [];
+          ? JSON.parse(savedInvoicesJSON)
+          : [];
       setSavedInvoices(savedInvoicesDefault);
     }
   }, []);
@@ -110,8 +110,8 @@ export const InvoiceContextProvider = ({
     const subscription = watch((value) => {
       try {
         window.localStorage.setItem(
-          LOCAL_STORAGE_INVOICE_DRAFT_KEY,
-          JSON.stringify(value)
+            LOCAL_STORAGE_INVOICE_DRAFT_KEY,
+            JSON.stringify(value)
         );
       } catch {}
     });
@@ -143,7 +143,7 @@ export const InvoiceContextProvider = ({
    * Generates a new invoice.
    */
   const newInvoice = () => {
-    reset(FORM_DEFAULT_VALUES);
+    reset(FORM_DEFAULT_VALUES as unknown as InvoiceType);
     setInvoicePdf(new Blob());
 
     // Clear the draft
@@ -255,23 +255,23 @@ export const InvoiceContextProvider = ({
         // Retrieve the existing array from local storage or initialize an empty array
         const savedInvoicesJSON = localStorage.getItem("savedInvoices");
         const savedInvoices = savedInvoicesJSON
-          ? JSON.parse(savedInvoicesJSON)
-          : [];
+            ? JSON.parse(savedInvoicesJSON)
+            : [];
 
         const updatedDate = new Date().toLocaleDateString(
-          "en-US",
-          SHORT_DATE_OPTIONS
+            "en-US",
+            SHORT_DATE_OPTIONS
         );
 
         const formValues = getValues();
         formValues.details.updatedAt = updatedDate;
 
         const existingInvoiceIndex = savedInvoices.findIndex(
-          (invoice: InvoiceType) => {
-            return (
-              invoice.details.invoiceNumber === formValues.details.invoiceNumber
-            );
-          }
+            (invoice: InvoiceType) => {
+              return (
+                  invoice.details.invoiceNumber === formValues.details.invoiceNumber
+              );
+            }
         );
 
         // If invoice already exists
@@ -404,12 +404,12 @@ export const InvoiceContextProvider = ({
         if (importedData.details) {
           if (importedData.details.invoiceDate) {
             importedData.details.invoiceDate = new Date(
-              importedData.details.invoiceDate
+                importedData.details.invoiceDate
             );
           }
           if (importedData.details.dueDate) {
             importedData.details.dueDate = new Date(
-              importedData.details.dueDate
+                importedData.details.dueDate
             );
           }
         }
@@ -425,28 +425,28 @@ export const InvoiceContextProvider = ({
   };
 
   return (
-    <InvoiceContext.Provider
-      value={{
-        invoicePdf,
-        invoicePdfLoading,
-        savedInvoices,
-        pdfUrl,
-        onFormSubmit,
-        newInvoice,
-        generatePdf,
-        removeFinalPdf,
-        downloadPdf,
-        printPdf,
-        previewPdfInTab,
-        saveInvoice,
-        deleteInvoice,
-        sendPdfToMail,
-        exportInvoiceAs,
-        importInvoice,
-        sendInvoiceToWhatsApp,
-      }}
-    >
-      {children}
-    </InvoiceContext.Provider>
+      <InvoiceContext.Provider
+          value={{
+            invoicePdf,
+            invoicePdfLoading,
+            savedInvoices,
+            pdfUrl,
+            onFormSubmit,
+            newInvoice,
+            generatePdf,
+            removeFinalPdf,
+            downloadPdf,
+            printPdf,
+            previewPdfInTab,
+            saveInvoice,
+            deleteInvoice,
+            sendPdfToMail,
+            exportInvoiceAs,
+            importInvoice,
+            sendInvoiceToWhatsApp,
+          }}
+      >
+        {children}
+      </InvoiceContext.Provider>
   );
 };
