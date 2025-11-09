@@ -33,9 +33,9 @@ const BaseNavbar = () => {
                         {/*/>*/}
                     </Link>
                     {/* ? DEV Only */}
-                    {devEnv && <DevDebug />}
-                    <LanguageSelector />
-                    <ThemeSwitcher />
+                    {/*{devEnv && <DevDebug />}*/}
+                    {/*<LanguageSelector />*/}
+                    {/*<ThemeSwitcher />*/}
                 </Card>
             </nav>
         </header>

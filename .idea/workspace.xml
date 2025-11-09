@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3670f231-b34e-4a95-a165-45ede08579a3" name="Changes" comment="feat(page): refactor AppHome to handle locale params">
+      <change afterPath="$PROJECT_DIR$/app/[locale]/dashboard/data.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/[locale]/dashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/layout/BaseNavbar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/layout/BaseNavbar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/select.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/select.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/ui/tooltip.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/ui/tooltip.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "dev.nx.console.last_ai_configure_notification_timestamp": "1762697701277",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "/home/amr/source/repos/kashik0i/oomor/apps/oomor-fatoora-frontend/app/[locale]",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "npm.dev.executor": "Run",
+    "npm.prisma:generate.executor": "Run",
+    "npm.prisma:migrate.executor": "Run",
+    "ts.external.directory.path": "/home/amr/source/repos/kashik0i/oomor/apps/oomor-fatoora-frontend/node_modules/typescript/lib"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/app/[locale]" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/.junie" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.dev">
+    <configuration name="dev" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="dev" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prisma:generate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prisma:generate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="prisma:migrate" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="prisma:migrate" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.dev" />
+        <item itemvalue="npm.prisma:generate" />
+        <item itemvalue="npm.prisma:migrate" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task id="LOCAL-00001" summary="fix(BillFromSection): type the event parameter in onInput">
+      <option name="closed" value="true" />
+      <created>1762699078764</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1762699078764</updated>
+    </task>
+    <task id="LOCAL-00002" summary="feat(env): update environment variables and next-auth version&#10;&#10;* Add DATABASE_URL and AUTH_SECRET to .env.example&#10;* Upgrade next-auth to version 5.0.0-beta.30">
+      <option name="closed" value="true" />
+      <created>1762699689908</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1762699689908</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore(deps): update Next.js and related dependencies&#10;&#10;* Upgrade Next.js to version 16.0.1&#10;* Upgrade next-intl to version 4.5.0&#10;* Upgrade sharp to version 0.34.5&#10;* Update next-auth to maintain compatibility with Next.js 16&#10;* Update various optional dependencies to their latest versions">
+      <option name="closed" value="true" />
+      <created>1762700222836</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1762700222836</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat(page): refactor AppHome to handle locale params">
+      <option name="closed" value="true" />
+      <created>1762700371160</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1762700371160</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat(auth): implement authentication and signup flow&#10;&#10;- Add NextAuth integration with Prisma adapter for user authentication.&#10;- Create signup API route for user registration with email and password.&#10;- Implement client-side signup page with form validation and error handling.&#10;- Update login form to use NextAuth for credential-based login.&#10;- Add necessary Prisma models and migrations for user management." />
+    <MESSAGE value="feat(auth): implement authentication and signup flow&#10;&#10;- Add NextAuth integration with Prisma adapter for user authentication.&#10;- Create signup API route for user registration with email and password.&#10;- Implement client-side signup page with form validation and error handling.&#10;- Update login form to use NextAuth for credential-based login.&#10;- Add necessary Prisma models and migrations for user management." />
+    <MESSAGE value="feat(env): update environment variables and next-auth version&#10;&#10;* Add DATABASE_URL and AUTH_SECRET to .env.example&#10;* Upgrade next-auth to version 5.0.0-beta.30" />
+    <MESSAGE value="chore(deps): update Next.js and related dependencies&#10;&#10;* Upgrade Next.js to version 16.0.1&#10;* Upgrade next-intl to version 4.5.0&#10;* Upgrade sharp to version 0.34.5&#10;* Update next-auth to maintain compatibility with Next.js 16&#10;* Update various optional dependencies to their latest versions" />
+    <MESSAGE value="feat(page): refactor AppHome to handle locale params" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat(page): refactor AppHome to handle locale params" />
+  </component>
+</project>

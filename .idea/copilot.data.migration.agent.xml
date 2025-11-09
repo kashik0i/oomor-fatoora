@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AgentMigrationStateService">
+    <option name="pendingSessionIds">
+      <option value="2996a0af-b960-4a8c-b007-80164bdabf8a" />
+      <option value="2b4e3b21-6575-4044-9932-c0560ad4e0ed" />
+      <option value="7ed87cce-eb82-4007-b47e-dd8a29f744be" />
+      <option value="98f54432-4576-4e08-9e4d-902e4bda47cf" />
+      <option value="c269b49e-8b40-4af6-9d46-cd3c3a02838c" />
+      <option value="c97fa112-9d29-4ba7-8c81-42cf04a872eb" />
+    </option>
+    <option name="pendingTurns">
+      <map>
+        <entry key="2996a0af-b960-4a8c-b007-80164bdabf8a">
+          <value>
+            <set>
+              <option value="9a3f0d9d-44b4-475f-947e-2f2e51f9334c" />
+            </set>
+          </value>
+        </entry>
+        <entry key="2b4e3b21-6575-4044-9932-c0560ad4e0ed">
+          <value>
+            <set>
+              <option value="92f5835d-8779-4477-bd1c-372fcc33edb9" />
+            </set>
+          </value>
+        </entry>
+        <entry key="7ed87cce-eb82-4007-b47e-dd8a29f744be">
+          <value>
+            <set>
+              <option value="571dbe2e-dea3-4f69-bd08-a0eb0fc2d371" />
+            </set>
+          </value>
+        </entry>
+        <entry key="98f54432-4576-4e08-9e4d-902e4bda47cf">
+          <value>
+            <set>
+              <option value="f1ca945b-cef2-462f-a75f-10ac23bb5282" />
+            </set>
+          </value>
+        </entry>
+        <entry key="c269b49e-8b40-4af6-9d46-cd3c3a02838c">
+          <value>
+            <set>
+              <option value="2d8dfee5-cadf-4d52-b717-b9e94aa13670" />
+            </set>
+          </value>
+        </entry>
+        <entry key="c97fa112-9d29-4ba7-8c81-42cf04a872eb">
+          <value>
+            <set>
+              <option value="8288ba83-5895-4ca5-8b47-5863ad9aaea6" />
+              <option value="bdc1725d-fb09-443e-aea0-e2d70e056f89" />
+            </set>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

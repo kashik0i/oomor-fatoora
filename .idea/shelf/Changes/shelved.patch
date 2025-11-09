@@ -1,0 +1,42 @@
+Index: app/[locale]/app/page.tsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>// App area: authenticated workspace (placeholder until auth guard is added)\n// Renders the existing invoice main for now\n\nimport { InvoiceMain } from \"@/app/components\";\nimport { auth } from \"@/lib/auth\";\nimport { redirect } from \"next/navigation\";\n\nexport default async function AppHome({ params: { locale } }: { params: { locale: string } }) {\n  const session = await auth();\n  if (!session) {\n    redirect(`/${locale}/auth`);\n  }\n  return (\n    <main className=\"py-10 lg:container\">\n      <InvoiceMain />\n    </main>\n  );\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/app/[locale]/app/page.tsx b/app/[locale]/app/page.tsx
+--- a/app/[locale]/app/page.tsx	(revision 92324e4d3695b3d8f079e582222d8af4e18552c3)
++++ b/app/[locale]/app/page.tsx	(date 1762700125363)
+@@ -1,18 +1,18 @@
+ // App area: authenticated workspace (placeholder until auth guard is added)
+ // Renders the existing invoice main for now
+ 
+-import { InvoiceMain } from "@/app/components";
+-import { auth } from "@/lib/auth";
+-import { redirect } from "next/navigation";
++import {InvoiceMain} from "@/app/components";
++import {auth} from "@/lib/auth";
++import {redirect} from "next/navigation";
+ 
+-export default async function AppHome({ params: { locale } }: { params: { locale: string } }) {
+-  const session = await auth();
+-  if (!session) {
+-    redirect(`/${locale}/auth`);
+-  }
+-  return (
+-    <main className="py-10 lg:container">
+-      <InvoiceMain />
+-    </main>
+-  );
++export default async function AppHome({params: {locale}}: { params: { locale: string } }) {
++    const session = await auth();
++    if (!session) {
++        redirect(`/${locale}/auth`);
++    }
++    return (
++        <main className="py-10 lg:container">
++            <InvoiceMain/>
++        </main>
++    );
+ }
