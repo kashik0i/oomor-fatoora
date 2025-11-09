@@ -5,7 +5,13 @@ import { InvoiceMain } from "@/app/components";
 import { auth } from "@/lib/auth";
 import { redirect } from "next/navigation";
 
-export default async function AppHome({ params: { locale } }: { params: { locale: string } }) {
+export default async function AppHome(props: { params: Promise<{ locale: string }> }) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const session = await auth();
   if (!session) {
     redirect(`/${locale}/auth`);
