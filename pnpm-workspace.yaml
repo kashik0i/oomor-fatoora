@@ -2,6 +2,7 @@ onlyBuiltDependencies:
   - '@firebase/util'
   - '@prisma/client'
   - '@prisma/engines'
+  - '@swc/core'
   - esbuild
   - prisma
   - protobufjs
